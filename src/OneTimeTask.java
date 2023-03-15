@@ -7,7 +7,7 @@ public  class OneTimeTask  extends Task implements Entry{ // Одноразов�
         super(title, description, taskType, firstDate);
     }
 
-    public boolean checkOccurance(LocalDateTime requestedDate) {
+    public boolean checkOccurance(LocalDateTime requestedDate){
         return getFirstDate().toLocalDate().equals(requestedDate.toLocalDate());
     }
 

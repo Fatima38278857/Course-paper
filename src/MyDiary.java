@@ -111,44 +111,46 @@ public class MyDiary { // МОЙ ЕЖЕДНЕВНИК
                 tasks.add(task);
             }
 
-            return tasks;
+
         }
+        return tasks;
     }
 
 
     private static Entry createTask(int occurance, String title, String description, TaskType taskType, LocalDateTime localDateTime) throws StringException {
-             return switch (occurance) {
-                 case 0 -> {
-                     OneTimeTask oneTimeTask = new OneTimeTask(title, description, taskType, localDateTime) {
-                     actualTasks.put(oneTimeTask.getid(), oneTimeTask);
-                     yield oneTimeTask;
-                }
-                case 1 -> {
-                    DailyTask task = new DailyTask(title, description, taskType, localDateTime) {
-                     actualTasks.put(task.getid(),task);
-                     yield task;
-                    }
-                    case 2 -> {
-                        WeeklyTask task = new WeeklyTask(title, description, taskType, localDateTime) {
-                            actualTasks.put(task.getid(), task);
-                            yield task;
-                        }
-                        case 3 -> {
-                            MonthlyTask task = new MonthlyTask(title, description, taskType, localDateTime) {
-                                actualTasks.put(onceleTask.getid(), task);
-                                yield task;
-                            }
-                            case 4 -> {
-                                YearlyTask task 3= new YearlyTask(title, description, taskType, localDateTime) {
-                                    actualTasks.put(onceleTask.getid(), (task);
-                                    yield task;
-                                }
-                                  befault -> null;
-                            }
-                        }
-                        private static void printActualTasks() {
-                            for (Entry task : actualTasks.values()) {
-                                System.out.println(task);
-                            }
-                        }
-                    }
+        switch (occurance) {
+            case 0:
+                OneTimeTask oneTimeTask = new OneTimeTask(title, description, taskType, localDateTime);
+                actualTasks.put(oneTimeTask.getId(), oneTimeTask);
+                return oneTimeTask;
+            case 1:
+                DailyTask dailyTask = new DailyTask(title, description, taskType, localDateTime);
+                actualTasks.put(dailyTask.getId(), dailyTask);
+                return dailyTask;
+
+            case 2:
+                WeeklyTask weeklyTask = new WeeklyTask(title, description, taskType, localDateTime);
+                actualTasks.put(weeklyTask.getId(), weeklyTask);
+                return weeklyTask;
+            case 3:
+                MonthlyTask monthlyTask = new MonthlyTask(title, description, taskType, localDateTime);
+                actualTasks.put(monthlyTask.getId(), monthlyTask);
+                return monthlyTask;
+            case 4:
+                YearlyTask yearlyTask = new YearlyTask(title, description, taskType, localDateTime);
+                actualTasks.put(yearlyTask.getId(), yearlyTask);
+                return yearlyTask;
+
+        }
+        return null;
+    }
+
+
+    private static void printActualTasks() {
+        for (Entry task : actualTasks.values()) {
+            System.out.println(task);
+        }
+    }
+
+
+    }

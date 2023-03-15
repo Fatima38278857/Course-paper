@@ -9,7 +9,7 @@ public class MonthlyTask  extends Task implements Entry{ // Ежемесячны
         super(title, description, taskType, firstDate);
     }
 
-    public boolean checkOccurance(LocalDate requestedDate) {
+    public boolean checkOccurance(LocalDate requestedDate){
         return getFirstDate().getDayOfMonth() == (requestedDate.getDayOfMonth());
     }
 

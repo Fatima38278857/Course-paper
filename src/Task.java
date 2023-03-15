@@ -9,7 +9,7 @@ public abstract class Task { // ЗАДАЧИ
     private TaskType taskType;
     private LocalDateTime firstDate;
     private static Integer counter = 1;
-    private final Integer id;
+    private final Integer  id;
 
 
     public Task(String title, String description, TaskType taskType, LocalDateTime firstDate) throws StringException{

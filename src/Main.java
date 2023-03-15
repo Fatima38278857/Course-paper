@@ -1,8 +1,4 @@
 import java.util.Scanner;
-
-
-
-
 public class Main {
     public static void main(String[] args) {
 
@@ -20,7 +16,7 @@ public class Main {
                         MyDiary.addTask(scanner); // Заголовок
                         break;
                     case 2:
-
+                        MyDiary.getGroupedByDate();
                         break;
                     case 3:
                         MyDiary.deleteTask(scanner); // Удоление
@@ -34,9 +30,8 @@ public class Main {
     }
 
                     private static void printMenu() {
-                        System.out.println("""
-                    1. Добавить задачу
-                    2. Получить задачу
-                    3. Удалять задачу""");
-                    }
+                        System.out.println("1 заголовок");
+                        System.out.println("2 Задачи на день");
+                        System.out.println("З Удолить задачу");
+    }
 }

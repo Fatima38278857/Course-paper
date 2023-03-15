@@ -4,7 +4,7 @@ public interface Entry { // Вхождение задачи
 
     boolean checkOccurance(LocalDateTime localDateTime);
 
-    void setTitile(String titile);
+    void setTitile(String titile) ;
 
     LocalDateTime getFistDate();
 

@@ -6,7 +6,7 @@ public  class DailyTask  extends Task implements Entry { // Ежедневные
     public LocalDateTime appearsln;
 
     public DailyTask(String title, String description, TaskType taskType, LocalDateTime firstDate) throws StringException {
-        super(title, description, taskType, firstDate);
+        super(title, description, taskType, firstDate) ;
     }
 
 

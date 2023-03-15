@@ -7,6 +7,6 @@ public enum TaskType {  // ТИП ЗАДАЧИ
     public final int value;
 
     TaskType(int value) {
-        this.value = value;
+        this.value = value ;
     }
 }

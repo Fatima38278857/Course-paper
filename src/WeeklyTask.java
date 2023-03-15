@@ -9,7 +9,7 @@ public  class WeeklyTask extends Task implements Entry { // Еженедельн
     }
 
     public boolean checkOccurance(LocalDate requestedDate) {
-        return getFirstDate().getDayOfWeek().equals(requestedDate.getDayOfWeek());
+        return getFirstDate().getDayOfWeek().equals(requestedDate.getDayOfWeek()) ;
     }
 
     @Override

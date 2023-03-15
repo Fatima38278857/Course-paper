@@ -4,7 +4,7 @@ public class CheckString {
         if (string == null || string.isEmpty() || string.isBlank()) {
             throw new  StringException("Некоректный вод");
         } else {
-            return string;
+            return string ;
         }
 
     }

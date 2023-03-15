@@ -14,7 +14,7 @@ public class YearlyTask extends Task implements Entry{ // Годовые зад�
 
     @Override
     public boolean checkOccurance(LocalDateTime localDateTime) {
-        return false;
+        return false ;
     }
 
     @Override
